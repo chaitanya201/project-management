@@ -84,19 +84,19 @@ function App() {
         cookies.teacher && cookies.token && <Navbar />
       } */}
       <Routes>
-        <Route path="/" element={<Home />}></Route>
+        <Route path="/project-management/" element={<Home />}></Route>
 
         {/* Public Routes */}
         {/* Student's Routes */}
 
         <Route
-          path="/register"
+          path="/project-management/register"
           element={
             user && user.position === "student" ? <AddTasks /> : <Register />
           }
         ></Route>
         <Route
-          path="/login"
+          path="/project-management/login"
           element={
             user && user.position === "student" ? <AddTasks /> : <Login />
           }
@@ -104,7 +104,7 @@ function App() {
 
         {/* Teachers Routes */}
         <Route
-          path="/teacher-register"
+          path="/project-management/teacher-register"
           element={
             user && user.position === "teacher" ? (
               <ProjectApprovalRequests />
@@ -114,7 +114,7 @@ function App() {
           }
         ></Route>
         <Route
-          path="/teacher-login"
+          path="/project-management/teacher-login"
           element={
             user && user.position === "teacher" ? (
               <ProjectApprovalRequests />
@@ -125,7 +125,7 @@ function App() {
         ></Route>
         {/* Admin Routes */}
         <Route
-          path="/admin-register"
+          path="/project-management/admin-register"
           element={
             user && user.position === "admin" ? (
               <AdminHome />
@@ -137,13 +137,13 @@ function App() {
           }
         ></Route>
         <Route
-          path="/admin-login"
+          path="/project-management/admin-login"
           element={user && user.position? <AdminHome /> :<AdminLogin /> }
         ></Route>
 
         {/* Protected Routes */}
         {/* Students Routes */}
-        <Route path="/student/">
+        <Route path="/project-management/student/">
           <Route
             path="create-project"
             element={
@@ -225,7 +225,7 @@ function App() {
         </Route>
 
         {/* Teachers Routes */}
-        <Route path="/teacher/">
+        <Route path="/project-management/teacher/">
           <Route
             path="home"
             element={
@@ -318,7 +318,7 @@ function App() {
         </Route>
 
         {/* Admin Routes */}
-        <Route path="/admin/">
+        <Route path="/project-management/admin/">
           <Route path="home" element={<AdminHome />}></Route>
           <Route
             path="show-teachers-projects"
