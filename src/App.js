@@ -1,5 +1,5 @@
 import { useCookies } from "react-cookie";
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import {  HashRouter,Route, Routes, useLocation } from "react-router-dom";
 import Login from "./components/Auth/Login";
 import Register from "./components/Auth/Registration";
 import Home from "./components/Home";
@@ -67,7 +67,7 @@ function App() {
   }, [cookies.user, dispatch]);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       {/* {(cookies.student &&
         cookies.token &&
         cookies.student !== "undefined" &&
@@ -370,7 +370,7 @@ function App() {
         </Route>
         <Route path="*" element={<h1>Path not found</h1>}></Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
