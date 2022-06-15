@@ -67,7 +67,7 @@ function App() {
   }, [cookies.user, dispatch]);
 
   return (
-    <HashRouter>
+    <HashRouter basename="/project-management">
       {/* {(cookies.student &&
         cookies.token &&
         cookies.student !== "undefined" &&
