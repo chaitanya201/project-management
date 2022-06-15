@@ -1,5 +1,5 @@
 import { useCookies } from "react-cookie";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import Login from "./components/Auth/Login";
 import Register from "./components/Auth/Registration";
 import Home from "./components/Home";
@@ -46,6 +46,8 @@ function App() {
   const dispatch = useDispatch();
   // // // // // console.log("user is ", user);
   // // // // // console.log(!user, "...");
+  const location = useLocation()
+  console.log("path", location.pathname)
 
   useEffect(() => {
     if (cookies.user) {
