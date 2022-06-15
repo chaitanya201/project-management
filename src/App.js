@@ -84,7 +84,7 @@ function App() {
         cookies.teacher && cookies.token && <Navbar />
       } */}
       <Routes>
-        <Route path="project-management/" element={<Home />}></Route>
+        <Route path="/project-management/" element={<Home />}></Route>
 
         {/* Public Routes */}
         {/* Student's Routes */}
