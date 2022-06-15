@@ -47,6 +47,7 @@ function App() {
   // // // // // console.log("user is ", user);
   // // // // // console.log(!user, "...");
   const location = useLocation()
+  console.log("hfil")
   console.log("path", location.pathname)
 
   useEffect(() => {
