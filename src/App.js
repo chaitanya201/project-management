@@ -67,7 +67,7 @@ function App() {
   }, [cookies.user, dispatch]);
 
   return (
-    <BrowserRouter  >
+    <HashRouter  >
       {/* {(cookies.student &&
         cookies.token &&
         cookies.student !== "undefined" &&
@@ -370,7 +370,7 @@ function App() {
         </Route>
         <Route path="*" element={<h1>Path not found</h1>}></Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
