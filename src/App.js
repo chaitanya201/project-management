@@ -67,7 +67,7 @@ function App() {
   }, [cookies.user, dispatch]);
 
   return (
-    <HashRouter  >
+    <HashRouter basename="/project-management" >
       {/* {(cookies.student &&
         cookies.token &&
         cookies.student !== "undefined" &&
@@ -87,13 +87,13 @@ function App() {
         cookies.teacher && cookies.token && <Navbar />
       } */}
       <Routes>
-        <Route path="/project-management" element={<Home />}></Route>
+        <Route path="/home" element={<Home />}></Route>
 
         {/* Public Routes */}
         {/* Student's Routes */}
 
         <Route
-          path="/project-management/register"
+          path="/register"
           element={
             user && user.position === "student" ? <AddTasks /> : <Register />
           }
